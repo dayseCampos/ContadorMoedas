@@ -1,46 +1,52 @@
-# Contador de Moedas – Processamento de Imagens
+# 🪙 Contador de Moedas – Visão Computacional com Python
 
-Este projeto utiliza **Python**, **OpenCV** e **scikit-learn** para detectar moedas em uma imagem, classificá-las e retornar seus valores.  
-Ele também possui um pequeno servidor Flask que permite enviar imagens e receber o resultado do contador.
+Bem-vindo(a)!  
+Este projeto utiliza **Python**, **OpenCV** e **scikit-learn** para detectar e classificar moedas em imagens, retornando tanto a quantidade quanto o valor total.  
+Além disso, há um servidor **Flask**, permitindo enviar imagens e receber o resultado em formato JSON.
 
 ---
 
-## 📌 Objetivo do Projeto
+## ✨ Objetivo do Projeto
 
-- Detectar moedas em uma imagem usando **técnicas de processamento de imagem**  
-- Classificar o valor das moedas com base em características visuais  
-- Retornar a contagem total e o valor acumulado  
-- Fornecer uma interface simples via API com **Flask**
+Este projeto foi desenvolvido para demonstrar, de forma prática e didática, como técnicas de **Processamento de Imagens** podem ser aplicadas para:
 
-O projeto foi desenvolvido para fins acadêmicos, mostrando na prática como visão computacional pode ser utilizada para reconhecimento de padrões.
+- 📸 Detectar moedas em uma imagem  
+- 🔍 Extrair características relevantes  
+- 🧠 Classificar o valor de cada moeda  
+- 🧮 Somar automaticamente o valor total  
+- 🌐 Servir tudo isso via API com Flask  
+
+Ele foi usado como trabalho acadêmico, mostrando como visão computacional pode resolver problemas reais.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **Python 3**
-- **OpenCV**
+- **OpenCV (cv2)**
 - **NumPy**
-- **scikit-learn**
+- **scikit-learn** (KMeans)
 - **Flask**
 - **Pillow**
 
 ---
 
-## 📥 Como Baixar e Rodar
+## 📥 Como Clonar e Rodar o Projeto
 
-### 1. Clonar o repositório
+### 1️⃣ Clonar o repositório
+
 ```bash
 git clone <seu-link-aqui>
 cd <nome-da-pasta>
 ```
 
-### 2. Criar ambiente virtual
+### 2️⃣ Criar ambiente virtual
+
 ```bash
 python -m venv .venv
 ```
 
-### 3. Ativar o ambiente virtual
+### 3️⃣ Ativar o ambiente virtual
 
 #### Windows:
 ```bash
@@ -52,40 +58,40 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-### 4. Instalar dependências
+### 4️⃣ Instalar as dependências
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Rodar o servidor Flask
+### 5️⃣ Iniciar o servidor Flask
+
 ```bash
 python contador_server.py
 ```
 
+A API ficará disponível em:
+
+```
+http://localhost:5000
+```
+
 ---
 
-## 🖼️ Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 ```
 ├── contador_classificar.py     # Lógica de detecção e classificação
-├── contador_server.py          # Servidor Flask
-├── uploads/                    # Imagens enviadas (se aplicável)
+├── contador_server.py          # Servidor Flask para a API
+├── uploads/                    # Imagens enviadas (opcional)
 ├── results/                    # Resultados gerados
-├── moedas.jpg                  # Exemplo de imagem usada no projeto
-├── requirements.txt            # Dependências
-└── .gitignore
+├── moedas.jpg                  # Imagem de exemplo
+├── requirements.txt            # Dependências do projeto
+└── .gitignore                  # Arquivos/pastas ignoradas
 ```
 
 ---
 
-## 💡 Observações
+## 🧡 Licença
 
-- A pasta `.venv/` não deve ser enviada ao GitHub.  
-- Você pode substituir a imagem `moedas.jpg` pelas suas próprias imagens de moedas para novos testes.  
-- O servidor Flask pode ser estendido para criar uma interface web, se desejado.
-
----
-
-## 📚 Licença
-Este projeto é de uso livre para fins educativos.
-
+Este projeto é livre para uso acadêmico e educacional.
